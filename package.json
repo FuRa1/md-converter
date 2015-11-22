@@ -2,6 +2,9 @@
   "name": "md-converter",
   "version": "0.0.1",
   "description": "markdown to html converter",
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "repository": {
     "type": "git",
     "url": "ssh://git@stash.kreditech.com:7999/front/portfolio.git"
