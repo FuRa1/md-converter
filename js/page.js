@@ -1,3 +1,7 @@
-/**
- * Created by Stanislav Polishchuk on 11/22/15.
- */
+$( document ).ready(function() {
+    $("textarea").keyup(function() {
+        var data = $("textarea").val();
+        console.log(data);
+        $("#result").html(data);
+    })
+});

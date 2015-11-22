@@ -1,0 +1,20 @@
+table {
+    padding: 5px;
+    width: 100%;
+    height: 500px;
+    border: dashed;
+    position: absolute;
+
+}
+.data{
+    border: 2px solid blueviolet;
+    width: 45%;
+    height: 100%;
+    position: relative;
+    vertical-align: top;
+    }
+textarea {
+    position: relative;
+    width: 99%;
+    height: 99%;
+}
