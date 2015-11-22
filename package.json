@@ -1,0 +1,16 @@
+{
+  "name": "md-converter",
+  "version": "0.0.1",
+  "description": "markdown to html converter",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.kreditech.com:7999/front/portfolio.git"
+  },
+  "keywords": [
+  ],
+  "author": "Boris Grevtsov",
+  "license": "No License",
+  "dependencies": {
+    "bower": "^1.5.2"
+  }
+}
