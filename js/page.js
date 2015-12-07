@@ -1,36 +1,37 @@
 $(function(){
-   /* var RegObj = {
+    var replacer={
+        header: function(text){
+            return text.replace(regs.header,function($1,$2){
+               var head = $2.length;
+               var content = $1.slice(head,$1.length+1);
+               return "<h"+head+">"+content+"</h"+head+">"})},
+        strong: function(text){
+            return text.replace(regs.strong,strings.strong)},
+        em: function(text){
+            return text.replace(regs.em,strings.em)},
+        link: function(text){
+            return text.replace(regs.link,strings.link)}};
+    var regs = {
         block: /(#{1,6}.*)/,
         header: /(#{1,6})(.*)/,
-        em: /\*{1}((.+?\n?)+?)\*{1}/g,
         strong: /\*{2}((.+?\n?)+?)\*{2}/g,
-        link: /\[(.*)\]\((.*)\)/
-    }; */
-    var block = /(#{1,6}.*)/;
-    var header = /(#{1,6})(.*)/;
-    var em = /\*{1}((.+?\n?)+?)\*{1}/g;
-    var strong = /\*{2}((.+?\n?)+?)\*{2}/g;
-    var link = /\[(.*)\]\((.*)\)/;
-    var textArray=[];
+        em: /\*{1}((.+?\n?)+?)\*{1}/g,
+        link: /\[(.*)\]\((.*)\)/};
+    var strings ={
+        strong: "<strong>"+"$1"+"</strong>",
+        em: "<em>"+"$1"+"</em>",
+        link: "<a href=\""+"$2"+"\">"+"$1"+"</a>"};
     var parsedTextArray =[];
-
     $("textarea").keyup(function() {
-        textArray = $("textarea").val().split(block);
-        Pars(textArray);
-    });
+        var textArray = $("textarea").val().split(regs.block);
+        Pars(textArray);});
 
 function Pars(text){
-        var textClone = text;
-    alert(typeof (textClone));
-    for(var key in textClone){
-        var newText = textClone.key;
-        console.log(newText);
-        newText = newText.replace(strong, "<strong>"+"$1"+"</strong>");
-        newText = newText.replace(em, "<em>"+"$1"+"</em>");
-        newText = newText.replace(link,"<a href=\""+"$2"+"\">"+"$1"+"</a>");
-        newText = newText.replace(header,"<h"+"$1".length+">"+"$2"+"</h"+"$1".length+">");
-        parsedTextArray.push(newText);
-    }
-    $("#result").html(parsedTextArray.join(/\n/));
-};
+    for(var i = 0; i<text.length; i++){
+        text[i] = replacer.strong(text[i]);
+        text[i] = replacer.em(text[i]);
+        text[i] = replacer.link(text[i]);
+        text[i] = replacer.header(text[i]);
+        parsedTextArray[i] = text[i];}
+    $("#result").html(parsedTextArray.join());};
 })
