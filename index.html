@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <title>MD Converter</title>
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 <body>
-    <table class="table1">
+<div id="title">grevtsov.b@protonmail.com</div>
+<header>
+    <h1>Markdown Converter</h1>
+</header>
+    <table class="table1" >
         <tr>
-            <td class="data"><textarea name="" id="source" cols="30" rows="10">
-                    Some Text
-                    *emphasizing*
-                    Some Text
-                    **STRONG**
-                    Some Text
-                    #Header 1
-                    *Some Text*
-                    ##Header 2
-                    **Some Text**
-                    ###Header 3
-                    Some Text
-                    ####Header 4
-                    **Some** *Text*
-                    #####Header 5
-                    Some Text
-                    ######Header 6r
-                    Some Text
-                    [link](https://github.com)
-            </textarea></td>
-            <td></td>
-            <td class="data"><div id="result"> </div></td>
+            <td class="data">
+                <textarea id="source" cols="30" rows="10">
+
+Simple Markdown converter supports headers:
+#Header 1
+##Header 2
+##Header 3
+######Header 6
+*Emphasizing* and **strong** text
+%New Paragraph
+Also supports [link](https://github.com)
+                </textarea>
+            </td>
+            <td class="col">
+            <button id="convert">Convert</button>
+            <td class="data">
+                <div id="result"></div>
+            </td>
         </tr>
     </table>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="js/parser.js"></script>
-    <script src="js/page.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/parser.js" defer></script>
+    <script src="js/page.js" defer></script>
 </body>
 </html>
