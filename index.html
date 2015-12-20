@@ -7,34 +7,35 @@
 
 </head>
 <body>
-<div id="title">grevtsov.b@protonmail.com</div>
+<div id="title"><a href="mailto:grevtsov.b@protonmail.com?Subject=Job" target="_top">grevtsov.b@protonmail.com</a>
+</div>
 <header>
     <h1>Markdown Converter</h1>
 </header>
-    <table class="table1" >
-        <tr>
-            <td class="data">
-                <textarea id="source" cols="30" rows="10">
-
-Simple Markdown converter supports headers:
+<div class="col">
+    <button id="convert">Convert</button>
+</div>
+<table class="table1">
+    <tr>
+        <td class="wells">
+                <textarea id="source" cols="30" rows="10">Simple Markdown converter supports headers:
 #Header 1
 ##Header 2
-##Header 3
+###Header 3
+####Header 4
+#####Header 5
 ######Header 6
 *Emphasizing* and **strong** text
 %New Paragraph
-Also supports [link](https://github.com)
-                </textarea>
-            </td>
-            <td class="col">
-            <button id="convert">Convert</button>
-            <td class="data">
-                <div id="result"></div>
-            </td>
-        </tr>
-    </table>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="js/parser.js"></script>
-    <script src="js/page.js"></script>
+Also supports [link](https://github.com</textarea>
+        </td>
+        <td class="wells">
+            <div id="result"></div>
+        </td>
+    </tr>
+</table>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/page.js"></script>
 </body>
 </html>
