@@ -1,2 +1,9 @@
 # md-converter
-markdown to html converter
+
+Converter that allows:
+
+* Headers
+* Links
+* Paragraphs
+* Strong text
+* Emphasizing text
