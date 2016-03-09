@@ -13,22 +13,24 @@
 
 </head>
 <body>
-<div id="nav-collapse" class="collapse navbar-collapse">
+
+<nav id="nav-collapse" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
         <li><a href="https://github.com/FuRa1/md-converter">GitHub</a></li>
         <li><a href="mailto:grevtsov.b@protonmail.com?Subject=Job">grevtsov.b@protonmail.com</a></li>
         <li><a href="skype:b0ccardi" target="_top">Skype: b0ccardi</a></li>
     </ul>
-</div>
-<header>
-    <h1>Markdown Converter</h1>
-</header>
-<div class="col">
-    <button class="btn btn-default" id="convert">Convert</button>
-</div>
-<table class="table1">
-    <tr>
-        <td class="wells">
+</nav>
+<main>
+    <header>
+        <h1>Markdown Converter</h1>
+    </header>
+    <article>
+        <div class="col">
+            <button class="btn btn-default" id="convert">Convert</button>
+        </div>
+    </article>
+    <section class="area">
                 <textarea id="source" cols="30" rows="10">Simple Markdown converter supports headers:
 #Header 1
 ##Header 2
@@ -40,12 +42,9 @@
 %New Paragraph
 Also supports [link](https://github.com)
                 </textarea>
-        </td>
-        <td class="wells">
-            <div id="result"></div>
-        </td>
-    </tr>
-</table>
+        <div id="result"></div>
+    </section>
+</main>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="js/parser.js"></script>
 <script src="js/page.js"></script>
